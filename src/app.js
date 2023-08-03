@@ -18,7 +18,7 @@ app.use(deserializeUser)
 
 db.sequelize.sync().then(() => {
     console.log('Database connected')
-    app.listen(PORT, HOST, () => {
+    app.listen(PORT, () => {
         console.log(`Server running at http://${HOST}:${PORT}`)
         routes(app)
     })
